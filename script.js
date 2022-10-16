@@ -1,3 +1,1 @@
-function playAudio(filename) {
-    new Audio(filename).play();
-}
+playAudio = (filename) => new Audio(filename).play();
