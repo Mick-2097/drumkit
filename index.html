@@ -17,13 +17,14 @@
             <div class="top">
                 <h1>MPC-9</h1>
                 <label class="tempoLabel" for="tempo">BPM: 
-                    <input class="tempoInput" name="tempo" type="number" min="160" max="320">
-                    <button class="tempoButton" onclick="startStop()"></button>
+                    <input title="select a tempo" class="tempoInput" name="tempo" type="number" min="120" max="240">
+                    <button title="stop / start" class="tempoButton" onclick="startStop()"></button>
                 </label>
-                <button class="color" onclick="changeColor()"></button>
+                <button title="change color" class="color" onclick="changeColor()"></button>
             </div>
             
             <div class="buttons">
+
                 <!-- <button class="button" id="button7" onclick="playAudio(`/sounds/HATS/HEATWAV - Dust Hi-Hat.wav`)"></button>
                 <button class="button" id="button8" onclick="playAudio(`/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav`)"></button>
                 <button class="button" id="button9" onclick="playAudio(`/sounds/HATS/HEATWAV - Star Hi-Hat.wav`)"></button>
@@ -44,8 +45,9 @@
                 <button class="button" id="button7" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - Bounce 808.wav`)"></button>
                 <button class="button" id="button8" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - OG 808 .wav`)"></button>
                 <button class="button" id="button9" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - UltraViolet 808.wav`)"></button>
+                
             </div>
-
+            
         </div>
         <footer>Footer</footer>
     </main>

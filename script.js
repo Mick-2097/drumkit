@@ -40,6 +40,8 @@ let changeColor = () => {
 
 //  Metronome
 let tempoInput = document.querySelector('.tempoInput')
+let tempoButton = document.querySelector('.tempoButton')
+
 let play = false
 tempoInput.addEventListener('click', () => play = false)
 
@@ -48,9 +50,15 @@ tempoInput.addEventListener('click', () => play = false)
 
 //     let metronome = setInterval(() => {
 //         if (play) {
+//             tempoButton.style.backgroundColor = 'var(--current)'
 //             playAudio('/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav')
+//             setTimeout(() => {
+//                 tempoButton.style.backgroundColor = 'var(--mpc)'
+//             }, 100);
+
 //         } else {
 //             clearInterval(metronome)
+//             tempoButton.style.backgroundColor = 'var(--mpc)'
 //         }
 //     }, Math.round(60000 / tempoInput.value))
 // }
@@ -61,8 +69,12 @@ let startStop = () => {
     let metronome = setInterval(() => {
         if (play) {
             playAudio('https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav')
+            setTimeout(() => {
+                tempoButton.style.backgroundColor = 'var(--mpc)'
+            }, 100);
         } else {
-            clearInterval(metronome)
+                clearInterval(metronome)
+                tempoButton.style.backgroundColor = 'var(--mpc)'
         }
     }, Math.round(60000 / tempoInput.value))
 }
