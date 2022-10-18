@@ -43,19 +43,9 @@ let tempoInput = document.querySelector('.tempoInput')
 let play = false
 tempoInput.addEventListener('click', () => play = false)
 
-let startStop = () => {
-    play = !play
-    let metronome = setInterval(() => {
-        if (play) {
-            playAudio('https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav')
-        } else {
-            clearInterval(metronome)
-        }
-    }, Math.round(60000 / tempoInput.value))
-}
-
 // let startStop = () => {
 //     play = !play
+
 //     let metronome = setInterval(() => {
 //         if (play) {
 //             playAudio('/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav')
@@ -64,3 +54,15 @@ let startStop = () => {
 //         }
 //     }, Math.round(60000 / tempoInput.value))
 // }
+
+let startStop = () => {
+    play = !play
+
+    let metronome = setInterval(() => {
+        if (play) {
+            playAudio('https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav')
+        } else {
+            clearInterval(metronome)
+        }
+    }, Math.round(60000 / tempoInput.value))
+}
