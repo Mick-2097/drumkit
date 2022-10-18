@@ -1,4 +1,4 @@
-//  Play audio on click
+//  Buttons play sounds
 let playAudio = (filepath) => new Audio(filepath).play()
 
 //  Key mapping
@@ -16,7 +16,7 @@ document.addEventListener('keydown', event => {
     if (event.key === '-') colorButton.click()
 })
 
-//  Color change button
+//  Color button
 let colors = [
         'var(--red)', 
         'var(--pink)', 
@@ -38,8 +38,7 @@ let changeColor = () => {
     root.style.setProperty('--current', colors[colorIndex])
 } 
 
-
-//  Tempo
+//  Metronome
 let tempoInput = document.querySelector('.tempoInput')
 let play = false
 tempoInput.addEventListener('click', () => play = false)
@@ -47,7 +46,7 @@ let startStop = () => {
     play = !play
     let metronome = setInterval(() => {
         if (play) {
-            playAudio('/sounds/HATS/HEATWAV - C-19 Hi-Hat.wav')
+            playAudio('/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav')
         } else {
             clearInterval(metronome)
         }
