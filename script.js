@@ -29,7 +29,6 @@ let colors = [
 let colorButton = document.querySelector('.color')
 let root = document.querySelector(':root')
 let colorIndex = 0
-
 let changeColor = () => {
     if (colorIndex < colors.length - 1) {
         colorIndex++
