@@ -1,3 +1,16 @@
+:root {
+    --red: rgb(255, 0, 0);
+    --pink: rgb(255, 0, 255);
+    --green: rgb(0, 255, 0);
+    --blue: rgb(0, 0, 255);
+    --yellow: rgb(255, 255, 0);
+    --teal: rgb(0, 255, 255);
+    --orange: rgb(255, 127, 0);
+
+    --current: var(--green);
+
+    --mpc-text: rgb(218, 218, 218);
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +18,6 @@
 }
 body {
     background-color: rgb(20, 20, 20);
-    display: flex;
 }
 main {
     min-height: 100vh;
@@ -15,41 +27,81 @@ main {
     align-items: center;
 }
 nav {
-    background-color: #333;
+    background-color: rgb(51, 51, 51);
     padding: .5rem 0 .5rem 2rem;
     width: 100vw;
 }
 footer {
-    background-color: #333;
+    background-color: rgb(51, 51, 51);
     padding: .5rem 0 .5rem .5rem;
     width: 100vw;
 }
 h3 {
-    color: rgb(0, 255, 0);
+    color: var(--current);
 }
 .mpc {
     width: 90vw;
     max-width: 390px;
-    background-color: #444;
+    background-color: rgb(68, 68, 68);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: inset 0px 0px 15px 0px rgb(0, 0, 0), 0px 0px 55px -25px var(--current);
+    color: var(--mpc-text);
+}
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+.tempoLabel {
+    font-size: small;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tempoInput {
+    width: 6ch;
+    background-color: rgb(20, 20, 20);
+    color: var(--mpc-text);
+}
+.tempoButton {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50%;
+    background-color: var(--current);
+    padding: 6px;
+    border: 2px solid black;
+    box-shadow: 0 0 6px 0 var(--current);
+}
+.color {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50%;
+    background-color: var(--current);
+    padding: 6px;
+    border: 2px solid black;
+    box-shadow: 0 0 6px 0 var(--current);
+}
+.buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: inset 0px 0px 15px 0px rgb(0, 0, 0), 0px 0px 35px -15px rgb(66, 255, 66);
 }
-button {
+.button {
     cursor: pointer;
     background-color: antiquewhite;
     width: 25%;
     height: 60px;
     margin: .5rem;
     border-radius: 5px;
-    box-shadow: inset 0px 2px 35px -4px rgb(0, 255, 0), 0px 2px 15px -4px rgb(153, 254, 168);
+    box-shadow: inset 0px 2px 35px -4px var(--current), 0px 0px 5px -2px var(--current);
 }
-button:active {
-    box-shadow: inset 0px 2px 25px 14px rgb(0, 255, 0), 0px 2px 25px 1px rgba(0, 255, 0, 0.697);
+.button:active {
+    box-shadow: inset 0px 2px 25px 14px var(--current), 0px 2px 25px 1px var(--current);
 }
 footer {
     display: flex;

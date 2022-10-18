@@ -13,25 +13,40 @@
             <h3>Drumkit</h3>
         </nav>
         <div class="mpc">
-            <!-- <button class="button" id="button7" onclick="playAudio(`/sounds/HATS/HEATWAV - Dust Hi-Hat.wav`)"></button>
-            <button class="button" id="button8" onclick="playAudio(`/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav`)"></button>
-            <button class="button" id="button9" onclick="playAudio(`/sounds/HATS/HEATWAV - Star Hi-Hat.wav`)"></button>
-            <button class="button" id="button4" onclick="playAudio(`/sounds/SNARE/HEATWAV - Brick Snare.wav`)"></button>
-            <button class="button" id="button5" onclick="playAudio(`/sounds/CLAP/HEATWAV - ThreeSix Clap.wav`)"></button>
-            <button class="button" id="button6" onclick="playAudio(`/sounds/CLAP/HEATWAV - Room Clap.wav`)"></button>
-            <button class="button" id="button1" onclick="playAudio(`/sounds/808/HEATWAV - Bounce 808.wav`)"></button>
-            <button class="button" id="button2" onclick="playAudio(`/sounds/808/HEATWAV - OG 808 .wav`)"></button>
-            <button class="button" id="button3" onclick="playAudio(`/sounds/808/HEATWAV - UltraViolet 808.wav`)"></button> -->
 
-            <button class="button" id="button1" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Dust Hi-Hat.wav`)"></button>
-            <button class="button" id="button2" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav`)"></button>
-            <button class="button" id="button3" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Star Hi-Hat.wav`)"></button>
-            <button class="button" id="button4" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/SNARE/HEATWAV - Brick Snare.wav`)"></button>
-            <button class="button" id="button5" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/CLAP/HEATWAV - ThreeSix Clap.wav`)"></button>
-            <button class="button" id="button6" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/CLAP/HEATWAV - Room Clap.wav`)"></button>
-            <button class="button" id="button7" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - Bounce 808.wav`)"></button>
-            <button class="button" id="button8" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - OG 808 .wav`)"></button>
-            <button class="button" id="button9" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - UltraViolet 808.wav`)"></button>
+            <div class="top">
+                <h1>MPC-9</h1>
+                <label class="tempoLabel" for="tempo">BPM: 
+                    <input class="tempoInput" name="tempo" type="number" min="60" max="320">
+                    <button class="tempoButton" onclick="startStop()"></button>
+                </label>
+                <button class="color" onclick="changeColor()"></button>
+            </div>
+            
+            <div class="buttons">
+                <button class="button" id="button7" onclick="playAudio(`/sounds/HATS/HEATWAV - Dust Hi-Hat.wav`)"></button>
+                <button class="button" id="button8" onclick="playAudio(`/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav`)"></button>
+                <button class="button" id="button9" onclick="playAudio(`/sounds/HATS/HEATWAV - Star Hi-Hat.wav`)"></button>
+                <button class="button" id="button4" onclick="playAudio(`/sounds/SNARE/HEATWAV - Brick Snare.wav`)"></button>
+                <button class="button" id="button5" onclick="playAudio(`/sounds/CLAP/HEATWAV - ThreeSix Clap.wav`)"></button>
+                <button class="button" id="button6" onclick="playAudio(`/sounds/CLAP/HEATWAV - Room Clap.wav`)"></button>
+                <button class="button" id="button1" onclick="playAudio(`/sounds/808/HEATWAV - Bounce 808.wav`)"></button>
+                <button class="button" id="button2" onclick="playAudio(`/sounds/808/HEATWAV - OG 808 .wav`)"></button>
+                <button class="button" id="button3" onclick="playAudio(`/sounds/808/HEATWAV - UltraViolet 808.wav`)"></button>
+
+
+                <!-- <button class="button" id="button1" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Dust Hi-Hat.wav`)"></button>
+                <button class="button" id="button2" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Cracked Hi-Hat.wav`)"></button>
+                <button class="button" id="button3" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/HATS/HEATWAV - Star Hi-Hat.wav`)"></button>
+                <button class="button" id="button4" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/SNARE/HEATWAV - Brick Snare.wav`)"></button>
+                <button class="button" id="button5" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/CLAP/HEATWAV - ThreeSix Clap.wav`)"></button>
+                <button class="button" id="button6" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/CLAP/HEATWAV - Room Clap.wav`)"></button>
+                <button class="button" id="button7" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - Bounce 808.wav`)"></button>
+                <button class="button" id="button8" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - OG 808 .wav`)"></button>
+                <button class="button" id="button9" onclick="playAudio(`https:/\/raw.githubusercontent.com/Mick-2097/drumkit/master/sounds/808/HEATWAV - UltraViolet 808.wav`)"></button> -->
+            </div>
+
+
         </div>
         <footer>Footer</footer>
     </main>
